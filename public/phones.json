@@ -1,0 +1,272 @@
+[
+    {
+        "category": "Apple",
+        "name": "Apple iPhone 14 Pro Max",
+        "photo": "https://www.mobiledokan.com/wp-content/uploads/2022/09/Apple-iPhone-14-Pro-Max.jpg",
+        "price": {
+            "original": 201599,
+            "resale": 170000
+        },
+        "usage": "6 months",
+        "posting-time": "2022-11-1T13:40:41.656Z",
+        "seller": {
+            "name": "Abdullah",
+            "location": "Dhaka"
+        }
+    },
+    {
+        "category": "Apple",
+        "name": "Apple iPhone 14 Pro",
+        "photo": "https://www.mobiledokan.com/wp-content/uploads/2022/09/Apple-iPhone-14-Pro.jpg",
+        "price": {
+            "original": 183499,
+            "resale": 150000
+        },
+        "usage": "5 months",
+        "posting-time": "2022-11-2T13:40:41.656Z",
+        "seller": {
+            "name": "Ahnaf",
+            "location": "Sylhet"
+        }
+    },
+    {
+        "category": "Apple",
+        "name": "Apple iPhone 14",
+        "photo": "https://www.mobiledokan.com/wp-content/uploads/2022/09/Apple-iPhone-14.jpg",
+        "price": {
+            "original": 146999,
+            "resale": 100000
+        },
+        "usage": "11 months",
+        "posting-time": "2022-11-3T13:40:41.656Z",
+        "seller": {
+            "name": "Shahriar",
+            "location": "Dhaka"
+        }
+    },
+    {
+        "category": "Apple",
+        "name": "Apple iPhone 13 Pro Max",
+        "photo": "https://www.mobiledokan.com/wp-content/uploads/2021/10/Apple-iPhone-13-Pro-Max-image.jpg",
+        "price": {
+            "original": 162999,
+            "resale": 130000
+        },
+        "usage": "7 months",
+        "posting-time": "2022-11-4T13:40:41.656Z",
+        "seller": {
+            "name": "Hasib",
+            "location": "Sylhet"
+        }
+    },
+    {
+        "category": "Apple",
+        "name": "Apple iPhone 13 Pro",
+        "photo": "https://www.mobiledokan.com/wp-content/uploads/2021/10/Apple-iPhone-13-Pro-image.jpg",
+        "price": {
+            "original": 147999,
+            "resale": 120000
+        },
+        "usage": "9 months",
+        "posting-time": "2022-11-5T13:40:41.656Z",
+        "seller": {
+            "name": "Ismail",
+            "location": "Dhaka"
+        }
+    },
+    {
+        "category": "Apple",
+        "name": "Apple iPhone 13",
+        "photo": "https://www.mobiledokan.com/wp-content/uploads/2021/10/Apple-iPhone-13-image.jpg",
+        "price": {
+            "original": 118999,
+            "resale": 100000
+        },
+        "usage": "5 months",
+        "posting-time": "2022-11-6T13:40:41.656Z",
+        "seller": {
+            "name": "Khaled",
+            "location": "Cumilla"
+        }
+    },
+    {
+        "category": "Android",
+        "name": "Xiaomi Redmi Note 11S",
+        "photo": "https://www.mobiledokan.com/wp-content/uploads/2022/04/Xiaomi-Redmi-Note-11S.jpg",
+        "price": {
+            "original": 27999,
+            "resale": 20000
+        },
+        "usage": "7 months",
+        "posting-time": "2022-11-7T13:40:41.656Z",
+        "seller": {
+            "name": "Khaleda",
+            "location": "Chittagong"
+        }
+    },
+    {
+        "category": "Android",
+        "name": "Realme Narzo 50A Prime",
+        "photo": "https://www.mobiledokan.com/wp-content/uploads/2022/06/Realme-Narzo-50A-Prime.jpg",
+        "price": {
+            "original": 15337,
+            "resale": 10000
+        },
+        "usage": "10 months",
+        "posting-time": "2022-11-8T13:40:41.656Z",
+        "seller": {
+            "name": "Mahamud",
+            "location": "Rajshahi"
+        }
+    },
+    {
+        "category": "Android",
+        "name": "Vivo X80 5G",
+        "photo": "https://www.mobiledokan.com/wp-content/uploads/2022/05/Vivo-X80-5G.jpg",
+        "price": {
+            "original": 76990,
+            "resale": 50000
+        },
+        "usage": "1.5 years",
+        "posting-time": "2022-11-9T13:40:41.656Z",
+        "seller": {
+            "name": "Ragib",
+            "location": "Dhaka"
+        }
+    },
+    {
+        "category": "Android",
+        "name": "Oppo F17",
+        "photo": "https://www.mobiledokan.com/wp-content/uploads/2020/10/Oppo-F17.jpg",
+        "price": {
+            "original": 20990,
+            "resale": 14999
+        },
+        "usage": "8 months",
+        "posting-time": "2022-11-10T13:40:41.656Z",
+        "seller": {
+            "name": "Tahmid",
+            "location": "Dhaka"
+        }
+    },
+    {
+        "category": "Android",
+        "name": "Samsung Galaxy Z Fold4",
+        "photo": "https://www.mobiledokan.com/wp-content/uploads/2022/08/Samsung-Galaxy-Z-Fold-4.jpg",
+        "price": {
+            "original": 259999,
+            "resale": 230000
+        },
+        "usage": "4 months",
+        "posting-time": "2022-11-11T13:40:41.656Z",
+        "seller": {
+            "name": "Afsain",
+            "location": "Dhaka"
+        }
+    },
+    {
+        "category": "Android",
+        "name": "OnePlus 10 Pro 5G",
+        "photo": "https://www.mobiledokan.com/wp-content/uploads/2022/04/OnePlus-10-Pro.jpg",
+        "price": {
+            "original": 84990,
+            "resale": 65000
+        },
+        "usage": "7 months",
+        "posting-time": "2022-11-12T13:40:41.656Z",
+        "seller": {
+            "name": "Jubayer",
+            "location": "Cumilla"
+        }
+    },
+    {
+        "category": "Button",
+        "name": "Samsung Metro 313",
+        "photo": "https://www.mobiledokan.com/wp-content/uploads/2019/03/Samsung-Metro-313-Black-1.jpg",
+        "price": {
+            "original": 2750,
+            "resale": 1500
+        },
+        "usage": "1 year",
+        "posting-time": "2022-11-13T13:40:41.656Z",
+        "seller": {
+            "name": "Mahidi",
+            "location": "Rajshahi"
+        }
+    },
+    {
+        "category": "Button",
+        "name": "Samsung Guru Music 2",
+        "photo": "https://www.mobiledokan.com/wp-content/uploads/2020/01/Samsung-Guru-Music-2.jpg",
+        "price": {
+            "original": 2450,
+            "resale": 1800
+        },
+        "usage": "9 months",
+        "posting-time": "2022-11-14T13:40:41.656Z",
+        "seller": {
+            "name": "Mobin",
+            "location": "Sylhet"
+        }
+    },
+    {
+        "category": "Button",
+        "name": "Nokia 6310 (2021)",
+        "photo": "https://www.mobiledokan.com/wp-content/uploads/2021/11/Nokia-6310-2021-image.jpg",
+        "price": {
+            "original": 5499,
+            "resale": 3000
+        },
+        "usage": "1 year",
+        "posting-time": "2022-11-15T13:40:41.656Z",
+        "seller": {
+            "name": "Samie",
+            "location": "Chittagong"
+        }
+    },
+    {
+        "category": "Button",
+        "name": "Nokia 2720 Flip",
+        "photo": "https://www.mobiledokan.com/wp-content/uploads/2020/04/Nokia-2720-flip-new.jpg",
+        "price": {
+            "original": 9500,
+            "resale": 7000
+        },
+        "usage": "1.5 years",
+        "posting-time": "2022-11-16T13:40:41.656Z",
+        "seller": {
+            "name": "Tazrian",
+            "location": "Dhaka"
+        }
+    },
+    {
+        "category": "Button",
+        "name": "Nokia 5310 (2020)",
+        "photo": "https://www.mobiledokan.com/wp-content/uploads/2020/03/Nokia-5310-2020.jpg",
+        "price": {
+            "original": 4499,
+            "resale": 2000
+        },
+        "usage": "1 year",
+        "posting-time": "2022-11-17T13:40:41.656Z",
+        "seller": {
+            "name": "Kabir",
+            "location": "Rajshahi"
+        }
+    },
+    {
+        "category": "Button",
+        "name": "Symphony S40",
+        "photo": "https://www.mobiledokan.com/wp-content/uploads/2019/11/Symphony-S40.jpg",
+        "price": {
+            "original": 1290,
+            "resale": 500
+        },
+        "usage": "10 months",
+        "posting-time": "2022-11-18T13:40:41.656Z",
+        "seller": {
+            "name": "Anwar",
+            "location": "Sylhet"
+        }
+    }
+]
