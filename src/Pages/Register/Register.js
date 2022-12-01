@@ -41,7 +41,7 @@ const Register = () => {
     }
 
     return (
-        <div className='w-full md:w-1/2 md:mx-auto p-10 md:border md:rounded md:mt-10'>
+        <div className='w-full md:w-1/2 md:mx-auto p-10 md:border md:rounded md:my-10 bg-gradient-to-r from-orange-100 via-blue-300 to-pink-300 md:border-black'>
             <h2 className='text-2xl font-bold text-center'>Register</h2>
             <form onSubmit={handleSubmit(handleSignUp)}>
                 <div className="form-control w-full">
@@ -67,12 +67,12 @@ const Register = () => {
                     })} className="input input-bordered w-full" />
                     {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
                 </div>
-                <input className='mt-5 mb-2 btn bg-orange-100 hover:bg-orange-400 hover:font-bold text-black hover:text-white w-full' value="Register" type="submit" />
+                <input className='mt-5 mb-2 btn w-full bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 rounded-md hover:font-bold text-black' value="Register" type="submit" />
                 {signUpError && <p className='text-red-600'>{signUpError}</p>}
             </form>
-            <p className='text-sm'>Already have an account? Login <Link className='text-orange-500 hover:font-semibold' to="/login">here</Link></p>
+            <p className='text-sm'>Already have an account? Login <Link className='text-red-700 underline hover:font-semibold' to="/login">here</Link></p>
             <div className="divider">OR</div>
-            <button onClick={handleGoogleSignIn} className='btn bg-orange-100 hover:bg-orange-400 hover:font-bold text-black hover:text-white w-full'>CONTINUE WITH GOOGLE</button>
+            <button onClick={handleGoogleSignIn} className='btn w-full bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 rounded-md hover:font-bold text-black'>CONTINUE WITH GOOGLE</button>
 
         </div>
     );

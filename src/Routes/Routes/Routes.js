@@ -9,6 +9,7 @@ import Blog from '../../Pages/Blog/Blog';
 import TermsAndConditions from '../../Pages/TermsAndConditions/TermsAndConditions';
 import PageNotFound from '../../Pages/PageNotFound/PageNotFound';
 import PhoneByCategory from '../../Pages/PhoneByCategory/PhoneByCategory';
+import Phones from '../../Pages/Phones/Phones';
 
 
 const router = createBrowserRouter([
@@ -21,9 +22,14 @@ const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: '/category/:name',
+                path: '/phones',
+                element: <Phones></Phones>,
+                loader: () => fetch('http://localhost:5000/phones')
+            },
+            {
+                path: '/phones/category/:name',
                 element: <PhoneByCategory></PhoneByCategory>,
-                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.name}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/phones/category/${params.name}`)
             },
             {
                 path: '/login',

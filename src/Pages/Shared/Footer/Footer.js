@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="footer p-5 md:p-10 bg-gradient-to-r from-orange-100 via-blue-300 to-pink-300 text-base-content">
+        <footer className="footer p-5 md:p-10 bg-gradient-to-r from-orange-100 via-blue-300 to-pink-300 border-t border-black text-base-content">
             <div>
                 <Link to="/" className='flex flex-col items-center justify-between cursor-pointer'>
                     <img className="w-10 mx-3 mask mask-hexagon" src={logo} alt="ABA logo" />
