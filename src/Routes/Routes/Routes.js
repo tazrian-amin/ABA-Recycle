@@ -4,6 +4,11 @@ import Main from '../../Layout/Main';
 import Home from '../../Pages/Home/Home/Home';
 import Login from '../../Pages/Login/Login/Login';
 import Register from '../../Pages/Register/Register';
+import About from '../../Pages/About/About';
+import Blog from '../../Pages/Blog/Blog';
+import TermsAndConditions from '../../Pages/TermsAndConditions/TermsAndConditions';
+import PageNotFound from '../../Pages/PageNotFound/PageNotFound';
+
 
 const router = createBrowserRouter([
     {
@@ -21,8 +26,24 @@ const router = createBrowserRouter([
             {
                 path: '/register',
                 element: <Register></Register>
+            },
+            {
+                path: '/about',
+                element: <About></About>
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
+            },
+            {
+                path: '/terms',
+                element: <TermsAndConditions></TermsAndConditions>
             }
         ]
+    },
+    {
+        path: '*',
+        element: <PageNotFound></PageNotFound>
     }
 ])
 
