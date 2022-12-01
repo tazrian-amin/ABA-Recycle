@@ -8,6 +8,7 @@ import About from '../../Pages/About/About';
 import Blog from '../../Pages/Blog/Blog';
 import TermsAndConditions from '../../Pages/TermsAndConditions/TermsAndConditions';
 import PageNotFound from '../../Pages/PageNotFound/PageNotFound';
+import PhoneByCategory from '../../Pages/PhoneByCategory/PhoneByCategory';
 
 
 const router = createBrowserRouter([
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>
+            },
+            {
+                path: '/category/:name',
+                element: <PhoneByCategory></PhoneByCategory>,
+                loader: ({ params }) => fetch(`http://localhost:5000/category/${params.name}`)
             },
             {
                 path: '/login',

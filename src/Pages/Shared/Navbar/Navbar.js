@@ -13,13 +13,13 @@ const Navbar = () => {
     }
 
     const menuItems = <>
-        <li><Link to="/" className='bg-gradient-to-r from-red-200 to-sky-200 hover:font-semibold rounded-md lg:mr-3'>Home</Link></li>
+        <li><Link to="/" className='bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 hover:font-semibold rounded-md lg:mr-3'>Home</Link></li>
 
         {user?.uid ?
             <>
-                <li><button onClick={handleLogOut} className="btn bg-gradient-to-r from-red-200 to-sky-200 rounded-md hover:font-bold text-black">Logout</button></li>
+                <li><button onClick={handleLogOut} className="btn bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 rounded-md hover:font-bold text-black">Logout</button></li>
             </>
-            : <li><Link to="/login" className='bg-gradient-to-r from-red-200 to-sky-200 hover:font-semibold rounded-md'>Login</Link></li>}
+            : <li><Link to="/login" className='bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 hover:font-semibold rounded-md'>Login</Link></li>}
 
     </>
 
@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className="navbar bg-gradient-to-r from-orange-100 via-blue-300 to-pink-300 flex justify-between px-3">
             <div className="navbar-start">
                 <div className="dropdown">
-                    <label tabIndex={0} className="btn bg-gradient-to-r from-red-200 to-sky-200 hover:font-semibold rounded-md text-black lg:hidden">
+                    <label tabIndex={0} className="btn bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 hover:font-semibold rounded-md text-black lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     <ul tabIndex={1} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
