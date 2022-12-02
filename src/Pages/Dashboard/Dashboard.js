@@ -5,7 +5,7 @@ const Dashboard = () => {
     const { user } = useContext(AuthContext);
     const [userRole, setUserRole] = useState('');
 
-    fetch(`http://localhost:5000/users/${user.email}`)
+    fetch(`https://recycle-phone-server-six.vercel.app/users/${user.email}`)
         .then(res => res.json())
         .then(data => setUserRole(data.userRole));
 

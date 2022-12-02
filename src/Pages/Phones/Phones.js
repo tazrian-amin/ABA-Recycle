@@ -19,7 +19,7 @@ const Phones = () => {
             setPhones(allPhones);
         }
         else {
-            fetch(`http://localhost:5000/phones?category=${category}`)
+            fetch(`https://recycle-phone-server-six.vercel.app/phones?category=${category}`)
                 .then(res => res.json())
                 .then(data => setPhones(data))
         }

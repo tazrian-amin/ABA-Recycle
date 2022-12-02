@@ -12,7 +12,7 @@ const MyProducts = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure you want to delete this post?');
         if (proceed) {
-            fetch(`http://localhost:5000/phones/${id}`, {
+            fetch(`https://recycle-phone-server-six.vercel.app/phones/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

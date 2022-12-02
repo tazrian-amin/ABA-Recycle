@@ -37,12 +37,12 @@ const router = createBrowserRouter([
             {
                 path: '/phones',
                 element: <Phones></Phones>,
-                loader: () => fetch('http://localhost:5000/phones')
+                loader: () => fetch('https://recycle-phone-server-six.vercel.app/phones')
             },
             {
                 path: '/phones/category/:name',
                 element: <PhoneByCategory></PhoneByCategory>,
-                loader: ({ params }) => fetch(`http://localhost:5000/phones/category/${params.name}`)
+                loader: ({ params }) => fetch(`https://recycle-phone-server-six.vercel.app/phones/category/${params.name}`)
             },
             {
                 path: '/login',
@@ -90,7 +90,7 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/myProducts/:email',
                 element: <SellerRoute><MyProducts></MyProducts></SellerRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/phones/${params.email}`, {
+                loader: ({ params }) => fetch(`https://recycle-phone-server-six.vercel.app/phones/${params.email}`, {
                     headers: {
                         'content-type': 'application/json',
                         authorization: `bearer ${localStorage.getItem('accessToken')}`

@@ -30,7 +30,7 @@ const Sell = () => {
             posting_time: posting_time
         }
 
-        fetch('http://localhost:5000/phones', {
+        fetch('https://recycle-phone-server-six.vercel.app/phones', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
