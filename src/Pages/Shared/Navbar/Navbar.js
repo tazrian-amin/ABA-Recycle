@@ -3,7 +3,7 @@ import logo from '../../../logo.jpg';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faMobile, faRightFromBracket, faRightToBracket } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faMobile, faRightFromBracket, faRightToBracket, faUpload } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -17,6 +17,7 @@ const Navbar = () => {
     const menuItems = <>
         <li><Link to="/" className='bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 hover:font-semibold border border-black rounded-md lg:mr-3'><FontAwesomeIcon icon={faHouse}></FontAwesomeIcon> Home</Link></li>
         <li><Link to="/phones" className='bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 hover:font-semibold border border-black rounded-md lg:mr-3'><FontAwesomeIcon icon={faMobile}></FontAwesomeIcon> Phones</Link></li>
+        <li><Link to="/sell" className='bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 hover:font-semibold border border-black rounded-md lg:mr-3'><FontAwesomeIcon icon={faUpload}></FontAwesomeIcon> Sell Post</Link></li>
         {user?.uid ?
             <>
                 <li><button onClick={handleLogOut} className="btn bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 border border-black rounded-md hover:font-bold text-black"><FontAwesomeIcon icon={faRightFromBracket}></FontAwesomeIcon> Logout</button></li>
