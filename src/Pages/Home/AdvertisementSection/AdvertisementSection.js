@@ -2,7 +2,7 @@ import React from 'react';
 
 const AdvertisementSection = () => {
     return (
-        <div>
+        <div className='hidden'>
             <h1>Advertisement</h1>
         </div>
     );

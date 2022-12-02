@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import useTitle from '../../hooks/useTitle';
 import PhoneCard from '../PhoneByCategory/PhoneCard';
 
 const Phones = () => {
+
+    useTitle('Phones');
 
     const allPhones = useLoaderData();
     const [phones, setPhones] = useState(allPhones);

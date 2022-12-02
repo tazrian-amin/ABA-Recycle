@@ -13,8 +13,8 @@ const Footer = () => {
             </div>
             <div>
                 <span className="footer-title opacity-100">Services</span>
-                <Link to='/buy' className="link link-hover">Buy Phone</Link>
-                <Link to='/sell' className="link link-hover">Sell Phone</Link>
+                <Link to='/phones' className="link link-hover">Buy Phone</Link>
+                <Link to='/dashboard/sell' className="link link-hover">Sell Phone</Link>
             </div>
             <div>
                 <span className="footer-title opacity-100">Company</span>

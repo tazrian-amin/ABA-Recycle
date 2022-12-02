@@ -26,13 +26,15 @@ const Sell = () => {
                 name: data.seller_name,
                 location: data.location
             },
+            email: data.email,
             posting_time: posting_time
         }
 
         fetch('http://localhost:5000/phones', {
             method: 'POST',
             headers: {
-                'content-type': 'application/json'
+                'content-type': 'application/json',
+                authorization: `bearer ${localStorage.getItem('accessToken')}`
             },
             body: JSON.stringify(phoneData)
         })
@@ -41,7 +43,7 @@ const Sell = () => {
                 console.log(data);
                 if (data.acknowledged) {
                     toast.success('Your selling post was successfully added!');
-                    navigate('/phones')
+                    navigate('/dashboard/myProducts')
                 }
             })
     }

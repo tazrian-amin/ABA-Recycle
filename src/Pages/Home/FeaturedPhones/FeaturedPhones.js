@@ -19,7 +19,7 @@ const FeaturedPhones = () => {
     ];
 
     return (
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 w-4/5 mx-auto'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 w-4/5 mx-auto mt-10'>
             {
                 categories.map((category, i) => <CategoryCard
                     key={i}

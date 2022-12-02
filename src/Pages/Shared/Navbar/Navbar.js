@@ -3,7 +3,7 @@ import logo from '../../../logo.jpg';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faMobile, faRightFromBracket, faRightToBracket, faUpload } from '@fortawesome/free-solid-svg-icons';
+import { faDashboard, faHouse, faMobile, faRightFromBracket, faRightToBracket, faUpload } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
@@ -17,9 +17,9 @@ const Navbar = () => {
     const menuItems = <>
         <li><Link to="/" className='bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 hover:font-semibold border border-black rounded-md lg:mr-3'><FontAwesomeIcon icon={faHouse}></FontAwesomeIcon> Home</Link></li>
         <li><Link to="/phones" className='bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 hover:font-semibold border border-black rounded-md lg:mr-3'><FontAwesomeIcon icon={faMobile}></FontAwesomeIcon> Phones</Link></li>
-        <li><Link to="/sell" className='bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 hover:font-semibold border border-black rounded-md lg:mr-3'><FontAwesomeIcon icon={faUpload}></FontAwesomeIcon> Sell Post</Link></li>
         {user?.uid ?
             <>
+                <li><Link to="/dashboard" className='bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 hover:font-semibold border border-black rounded-md lg:mr-3'><FontAwesomeIcon icon={faDashboard}></FontAwesomeIcon> Dashboard</Link></li>
                 <li><button onClick={handleLogOut} className="btn bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 border border-black rounded-md hover:font-bold text-black"><FontAwesomeIcon icon={faRightFromBracket}></FontAwesomeIcon> Logout</button></li>
             </>
             : <li><Link to="/login" className='bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 hover:font-semibold border border-black rounded-md'><FontAwesomeIcon icon={faRightToBracket}></FontAwesomeIcon> Login</Link></li>}
@@ -47,6 +47,9 @@ const Navbar = () => {
                     {menuItems}
                 </ul>
             </div>
+            <label htmlFor="dashboard-drawer" tabIndex={2} className="btn btn-ghost lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+            </label>
         </div>
     );
 };

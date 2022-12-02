@@ -11,12 +11,25 @@ import PageNotFound from '../../Pages/PageNotFound/PageNotFound';
 import PhoneByCategory from '../../Pages/PhoneByCategory/PhoneByCategory';
 import Phones from '../../Pages/Phones/Phones';
 import Sell from '../../Pages/Sell/Sell';
-
+import PrivateRoute from '../PrivateRoute/PrivateRoute';
+import DashboardLayout from '../../Layout/DashboardLayout';
+import DisplayError from '../../Pages/Shared/DisplayError/DisplayError';
+import MyOrders from '../../Pages/MyOrders/MyOrders';
+import MyWishlist from '../../Pages/MyWishlist/MyWishlist';
+import UserList from '../../Pages/Shared/UserList/UserList';
+import Reports from '../../Pages/Reports/Reports';
+import BuyerRoute from '../BuyerRoute/BuyerRoute';
+import SellerRoute from '../SellerRoute/SellerRoute';
+import AdminRoute from '../AdminRoute/AdminRoute';
+import Payment from '../../Pages/Payment/Payment';
+import Dashboard from '../../Pages/Dashboard/Dashboard';
+import MyProducts from '../../Pages/MyProducts/MyProducts';
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
+        errorElement: <DisplayError></DisplayError>,
         children: [
             {
                 path: '/',
@@ -31,10 +44,6 @@ const router = createBrowserRouter([
                 path: '/phones/category/:name',
                 element: <PhoneByCategory></PhoneByCategory>,
                 loader: ({ params }) => fetch(`http://localhost:5000/phones/category/${params.name}`)
-            },
-            {
-                path: '/sell',
-                element: <Sell></Sell>
             },
             {
                 path: '/login',
@@ -55,6 +64,46 @@ const router = createBrowserRouter([
             {
                 path: '/terms',
                 element: <TermsAndConditions></TermsAndConditions>
+            }
+        ]
+    },
+    {
+        path: '/dashboard',
+        element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
+        errorElement: <DisplayError></DisplayError>,
+        children: [
+            {
+                path: '/dashboard',
+                element: <Dashboard></Dashboard>
+            },
+            {
+                path: '/dashboard/myOrders',
+                element: <BuyerRoute><MyOrders></MyOrders></BuyerRoute>
+            },
+            {
+                path: '/dashboard/myWishlist',
+                element: <BuyerRoute><MyWishlist></MyWishlist></BuyerRoute>
+            },
+            {
+                path: '/dashboard/sell',
+                element: <SellerRoute><Sell></Sell></SellerRoute>
+            },
+            {
+                path: '/dashboard/myProducts/:email',
+                element: <SellerRoute><MyProducts></MyProducts></SellerRoute>,
+                loader: ({ params }) => fetch(`http://localhost:5000/phones/${params.email}`)
+            },
+            {
+                path: '/dashboard/sellers',
+                element: <AdminRoute><UserList></UserList></AdminRoute>
+            },
+            {
+                path: '/dashboard/buyers',
+                element: <AdminRoute><UserList></UserList></AdminRoute>
+            },
+            {
+                path: '/dashboard/reports',
+                element: <AdminRoute><Reports></Reports></AdminRoute>
             }
         ]
     },
