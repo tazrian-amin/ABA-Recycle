@@ -43,7 +43,7 @@ const Sell = () => {
                 console.log(data);
                 if (data.acknowledged) {
                     toast.success('Your selling post was successfully added!');
-                    navigate('/dashboard/myProducts')
+                    navigate(`/dashboard/myProducts/${user.email}`);
                 }
             })
     }

@@ -90,7 +90,12 @@ const router = createBrowserRouter([
             {
                 path: '/dashboard/myProducts/:email',
                 element: <SellerRoute><MyProducts></MyProducts></SellerRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/phones/${params.email}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/phones/${params.email}`, {
+                    headers: {
+                        'content-type': 'application/json',
+                        authorization: `bearer ${localStorage.getItem('accessToken')}`
+                    }
+                })
             },
             {
                 path: '/dashboard/sellers',
