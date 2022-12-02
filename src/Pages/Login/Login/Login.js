@@ -3,14 +3,21 @@ import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
+import useToken from '../../../hooks/useToken';
 
 const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const { signIn, googleSignIn } = useContext(AuthContext);
     const [loginError, setLoginError] = useState('');
+    const [loginUserEmail, setLoginUserEmail] = useState('');
+    const [token] = useToken(loginUserEmail);
     const location = useLocation();
     const navigate = useNavigate();
     const from = location.state?.from?.pathname || '/';
+
+    if (token) {
+        navigate(from, { replace: true });
+    }
 
     const handleLogin = data => {
         console.log(data);
@@ -19,7 +26,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user);
-                navigate(from, { replace: true });
+                setLoginUserEmail(data.email);
             })
             .catch(error => {
                 console.log(error.message)
@@ -32,11 +39,28 @@ const Login = () => {
             .then(res => {
                 const user = res.user;
                 console.log(user);
-                navigate(from, { replace: true });
+                saveUser(user.displayName, user.email, 'Buyer');
             })
             .catch(err => {
                 console.error(err);
                 toast.error(err.message);
+            })
+    }
+
+    const saveUser = (name, email, role) => {
+        const user = { name, email, role };
+
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                setLoginUserEmail(email);
             })
     }
 
