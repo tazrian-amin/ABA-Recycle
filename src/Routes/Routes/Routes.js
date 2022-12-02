@@ -21,7 +21,6 @@ import Reports from '../../Pages/Reports/Reports';
 import BuyerRoute from '../BuyerRoute/BuyerRoute';
 import SellerRoute from '../SellerRoute/SellerRoute';
 import AdminRoute from '../AdminRoute/AdminRoute';
-import Payment from '../../Pages/Payment/Payment';
 import Dashboard from '../../Pages/Dashboard/Dashboard';
 import MyProducts from '../../Pages/MyProducts/MyProducts';
 

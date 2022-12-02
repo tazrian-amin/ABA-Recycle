@@ -3,7 +3,7 @@ import logo from '../../../logo.jpg';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDashboard, faHouse, faMobile, faRightFromBracket, faRightToBracket, faUpload } from '@fortawesome/free-solid-svg-icons';
+import { faDashboard, faHouse, faMobile, faRightFromBracket, faRightToBracket } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);

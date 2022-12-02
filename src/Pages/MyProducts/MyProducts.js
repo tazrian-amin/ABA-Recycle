@@ -1,13 +1,11 @@
 import { faRectangleAd, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 import { useLoaderData } from 'react-router-dom';
-import { AuthContext } from '../../contexts/AuthProvider';
 
 const MyProducts = () => {
 
-    const { user } = useContext(AuthContext);
     const loadedPhones = useLoaderData();
     const [myPhones, setMyPhones] = useState(loadedPhones);
 
