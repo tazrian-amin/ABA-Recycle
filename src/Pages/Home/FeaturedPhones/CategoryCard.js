@@ -8,7 +8,7 @@ const CategoryCard = ({ category }) => {
     const { name, imgURL: photo } = category;
 
     return (
-        <div className="card bg-gradient-to-r from-orange-100 via-blue-300 to-pink-300 border border-black shadow-xl rounded-lg">
+        <div className="card border border-black shadow-xl rounded-lg text-white" style={{ background: 'linear-gradient(135deg,#e00074,#2f1672 33%,#0b1b72 60%,#0966a6 82%,#07e0fa)' }}>
             <h2 className="text-2xl font-bold text-center my-5 uppercase">{name}</h2>
             <figure><img src={photo} alt="phone" /></figure>
             <div className="card-body justify-center items-center">

@@ -74,19 +74,19 @@ const Register = () => {
     }
 
     return (
-        <div className='w-full md:w-1/2 md:mx-auto p-10 md:border md:rounded md:my-10 bg-gradient-to-r from-orange-100 via-blue-300 to-pink-300 md:border-black'>
+        <div className='w-full md:w-1/2 md:mx-auto p-10 md:border md:rounded md:my-10 md:border-black text-white' style={{ background: 'linear-gradient(135deg,#e00074,#2f1672 33%,#0b1b72 60%,#0966a6 82%,#07e0fa)' }}>
             <h2 className='text-2xl font-bold text-center'>Register</h2>
             <form onSubmit={handleSubmit(handleSignUp)}>
 
                 <div className='flex flex-col lg:flex-row items-center justify-evenly mt-5'>
-                    <div className="form-control btn bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 rounded-md hover:font-bold text-black w-full lg:w-1/5">
+                    <div className="form-control btn bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 rounded-md hover:font-bold text-white w-full lg:w-1/5">
                         <label className="label cursor-pointer">
                             <span className="label-text mr-2">Buyer</span>
                             <input type="radio" {...register("role")} value={'Buyer'} defaultChecked className="radio bg-white checked:bg-success" required />
                         </label>
                     </div>
 
-                    <div className="form-control btn bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 rounded-md hover:font-bold text-black w-full lg:w-1/5 my-4">
+                    <div className="form-control btn bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 rounded-md hover:font-bold text-white w-full lg:w-1/5 my-4">
                         <label className="label cursor-pointer">
                             <span className="label-text mr-2">Seller</span>
                             <input type="radio" {...register("role")} value={'Seller'} className="radio bg-white checked:bg-success" required />
@@ -95,26 +95,26 @@ const Register = () => {
                 </div>
 
                 <div className="form-control w-full">
-                    <label className="label"> <span className="label-text">Name</span></label>
+                    <label className="label"> <span className="label-text text-white">Name</span></label>
                     <input type="text" {...register("name", {
                         required: "Name is required"
-                    })} className="input input-bordered w-full" />
+                    })} className="input input-bordered text-black w-full" />
                     {errors.name && <p className='text-red-500'>{errors.name.message}</p>}
                 </div>
                 <div className="form-control w-full">
-                    <label className="label"> <span className="label-text">Email</span></label>
+                    <label className="label"> <span className="label-text text-white">Email</span></label>
                     <input type="email" {...register("email", {
                         required: true
-                    })} className="input input-bordered w-full" />
+                    })} className="input input-bordered text-black w-full" />
                     {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
                 </div>
                 <div className="form-control w-full">
-                    <label className="label"> <span className="label-text">Password</span></label>
+                    <label className="label"> <span className="label-text text-white">Password</span></label>
                     <input type="password" {...register("password", {
                         required: "Password is required",
                         minLength: { value: 6, message: "Password must have 6 characters or more" },
                         pattern: { value: /(?=.*[A-Z])(?=.*[!@#$&*])(?=.*[0-9])/, message: 'Password must contain an uppercase, a number, and a special character' }
-                    })} className="input input-bordered w-full" />
+                    })} className="input input-bordered text-black w-full" />
                     {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
                 </div>
                 <input className='mt-5 mb-2 btn w-full bg-gradient-to-r from-red-200 to-sky-200 hover:from-red-300 hover:to-sky-300 rounded-md hover:font-bold text-black' value="Register" type="submit" />

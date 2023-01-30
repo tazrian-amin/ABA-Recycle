@@ -65,11 +65,11 @@ const Login = () => {
     }
 
     return (
-        <div className='w-full md:w-1/2 md:mx-auto p-10 md:border md:rounded md:my-10 bg-gradient-to-r from-orange-100 via-blue-300 to-pink-300 md:border-black'>
+        <div className='w-full md:w-1/2 md:mx-auto p-10 md:border md:rounded md:my-10 md:border-black text-white' style={{ background: 'linear-gradient(135deg,#e00074,#2f1672 33%,#0b1b72 60%,#0966a6 82%,#07e0fa)' }}>
             <h2 className='text-2xl font-bold text-center'>Login</h2>
             <form onSubmit={handleSubmit(handleLogin)}>
                 <div className="form-control w-full">
-                    <label className="label"> <span className="label-text">Email</span></label>
+                    <label className="label"> <span className="label-text text-white">Email</span></label>
                     <input type="text"
                         {...register("email", {
                             required: "Email is required"
@@ -78,7 +78,7 @@ const Login = () => {
                     {errors.email && <p className='text-red-500'>{errors.email?.message}</p>}
                 </div>
                 <div className="form-control w-full">
-                    <label className="label"> <span className="label-text">Password</span></label>
+                    <label className="label"> <span className="label-text text-white">Password</span></label>
                     <input type="password"
                         {...register("password", {
                             required: "Password is required",

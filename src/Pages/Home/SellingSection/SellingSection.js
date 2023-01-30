@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const SellingSection = () => {
     return (
-        <div className="hero bg-gradient-to-r from-orange-100 via-blue-300 to-pink-300 border border-black w-4/5 mx-auto rounded-none md:rounded-md my-10">
+        <div className="hero border border-black w-4/5 mx-auto rounded-none md:rounded-md my-10 text-white" style={{ background: 'linear-gradient(135deg,#e00074,#2f1672 33%,#0b1b72 60%,#0966a6 82%,#07e0fa)' }}>
             <div className="hero-content flex-col lg:flex-row">
                 <img className='w-1/2 lg:w-1/5 rounded-md' src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=627&q=80" alt='selling img' />
 
